@@ -1,0 +1,240 @@
+/* Main CSS */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("2.jpg") no-repeat center center/cover;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#container {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 8px;
+    overflow: hidden;
+    width: 827px;
+    height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+#list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#list-header h1 {
+    margin: 0;
+}
+
+.blankDiv {
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addNoteDiv {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addNoteDiv:hover {
+    transition: 0.25s;
+    background-color: rgba(0, 0, 0, 0.9); /* Slightly darker on hover */
+}
+
+#addNoteDiv i {
+    font-size: 24px;
+    color: white; /* Change color to white */
+}
+
+/* List CSS */
+#list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+li {
+    background-color: rgba(255, 248, 133, 0.8); /* Semi-transparent background */
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    width: 200px;
+}
+
+li span {
+    font-size: 12px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    overflow-y: hidden;
+}
+
+li span:hover {
+    overflow-y: auto;
+}
+
+#noteBtns-container {
+    display: flex;
+}
+
+#editBtn,
+#deleteBtn {
+    background-color: #c6aaff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 60px;
+}
+
+#editBtn {
+    background-color: gainsboro;
+}
+
+#deleteBtn:hover {
+    background-color: #8c53ff;
+}
+
+#editBtn:hover {
+    background-color: gray;
+}
+
+/* Create Note Popup CSS */
+#popupContainer {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8c53ff;
+}
+
+#btn-container {
+    display: flex;
+}
+
+#submitBtn,
+#closeBtn {
+    width: 100px;
+    background-color: #8c53ff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#submitBtn:hover,
+#closeBtn:hover {
+    background-color: #6a42c8; /* Darker shade on hover */
+}
+
+#closeBtn {
+    background-color: gainsboro;
+}
+
+#closeBtn:hover {
+    background-color: gray; /* Darker shade on hover */
+}
+
+/* Editing Popup CSS */
+#editing-container {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* dark mode looking scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #121212;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #242424;
+}
+
+
